@@ -12,7 +12,7 @@ var paddle1Y;
 var  playerscore =0;
 var audio1;
 var pcscore =0;
-//ball x and y and speedx speed y and radius
+//ball x and y and speed x speed y and radius
 var ball = {
     x:350/2,
     y:480/2,
@@ -21,12 +21,25 @@ var ball = {
     dy:3
 }
 
-function setup(){
-  var canvas =  createCanvas(700,600);
+function setup() {
+      var canvas =  createCanvas(700,600);
+      canvas.parent("canvas");
+
+      video = createCapture(VIDEO);
+      video.size(700, 600);
+      video.hide();
+
+      poseNet = ml5.poseNet(video, modelLoaded);
+}
+
+function modelLoaded() {
+  console.log("Model is Loaded!");
 }
 
 
-function draw(){
+function draw() {
+
+  image(video, 0, 0, 700, 600);
 
  background(0); 
 

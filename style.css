@@ -16,7 +16,7 @@ body {
     border: 1px solid white;
 }
 
-#start, #status {
+#start, #status, #restart {
     font-size: 22px;
 }
 
@@ -24,4 +24,11 @@ h4 {
     background-color: #f5f5f5;
     line-height: 2;
     margin: 0px;
+}
+
+canvas {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 130px;
+    box-shadow: 5px 5px 5px white;
 }
